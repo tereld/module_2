@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chuyển Đổi Tiền Tệ</h1>
+        <form id="currencyForm">
+            <label for="amount">Số tiền muốn đổi:</label>
+            <input type="number" id="amount" required>
+            <label for="fromCurrency">Đơn vị tiền tệ cần đổi:</label>
+            <select id="fromCurrency" required>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="VND">VND</option>
+                <!-- Thêm các đơn vị tiền tệ khác nếu cần -->
+            </select>
+            <label for="toCurrency">Đơn vị tiền tệ sẽ dùng để đổi:</label>
+            <select id="toCurrency" required>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="VND">VND</option>
+                <!-- Thêm các đơn vị tiền tệ khác nếu cần -->
+            </select>
+            <button type="button" onclick="convertCurrency()">Chuyển Đổi</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        async function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            if (isNaN(amount) || amount <= 0) {
+                alert('Vui lòng nhập một số tiền hợp lệ.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
+                const data = await response.json();
+
+                if (!data.rates[toCurrency]) {
+                    alert('Không tìm thấy tỷ giá cho đơn vị tiền tệ này.');
+                    return;
+                }
+
+                const rate = data.rates[toCurrency];
+                const convertedAmount = amount * rate;
+
+                document.getElementById('result').innerHTML = `
+                    <p>${amount} ${fromCurrency} tương đương với ${convertedAmount.toFixed(2)} ${toCurrency}</p>
+                `;
+            } catch (error) {
+                alert('Có lỗi xảy ra khi lấy tỷ giá. Vui lòng thử lại sau.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung bình cộng 3 số</title>
+</head>
+<body>
+    <label for="vatLy">Điểm Lý:</label>
+    <br>
+    <input type="number" id="vatLy"><br>
+    <label for="hoaHoc">Điểm Hóa:</label>
+    <br>
+    <input type="number" id="hoaHoc"><br>
+    <label for="sinhHoc">Điểm Sinh:</label>
+    <br>
+    <input type="number" id="sinhHoc"><br>
+    <br>
+    <button onclick="tinhDiemTrungBinh()">Tính điểm trung bình</button>
+    <h1 id="result"></h1>
+    <script>
+        function tinhDiemTrungBinh() {
+            const vatLy = parseFloat(document.getElementById('vatLy').value);
+            const hoaHoc = parseFloat(document.getElementById('hoaHoc').value);
+            const sinhHoc = parseFloat(document.getElementById('sinhHoc').value);
+
+            if (isNaN(vatLy) || isNaN(hoaHoc) || isNaN(sinhHoc)) {
+                alert('Vui lòng nhập đầy đủ điểm cho tất cả các môn.');
+                return;
+            }
+
+            const tongDiem = vatLy + hoaHoc + sinhHoc;
+            const diemTrungBinh = tongDiem / 3;
+
+            document.getElementById('result').innerHTML = `
+                <p>Tổng điểm: ${tongDiem}</p>
+                <p>Điểm trung bình: ${diemTrungBinh.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

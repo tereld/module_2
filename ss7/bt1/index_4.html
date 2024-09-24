@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Chu Vi Hình Tròn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tính Chu Vi Hình Tròn</h1>
+        <form id="circumferenceForm">
+            <label for="radius">Bán kính (r):</label>
+            <input type="number" id="radius" required>
+            <button type="button" onclick="tinhChuViHinhTron()">Tính</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        function tinhChuViHinhTron() {
+            const radius = parseFloat(document.getElementById('radius').value);
+
+            if (isNaN(radius) || radius <= 0) {
+                alert('Vui lòng nhập một giá trị bán kính hợp lệ.');
+                return;
+            }
+
+            const circumference = 2 * Math.PI * radius;
+
+            document.getElementById('result').innerHTML = `
+                <p>Chu vi của hình tròn với bán kính ${radius} là ${circumference.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
