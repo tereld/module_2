@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập if...else...if</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Hãy nhập tên đăng nhập: ")
+
+        if (name === "admin") {
+            let pass = prompt("Hãy nhập mật khẩu: ")
+            if (pass == "themaster") {
+                console.log("Welcome!admin");
+            } else if (pass == "null") {
+                console.log("Canceld!");
+            } else {
+                console.log(`I don't know you`);
+            }
+        }
+    </script>
+</body>
+</html>

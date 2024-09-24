@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập switch...case</title>
+</head>
+<body>
+    <input type="number" id="month">
+    <button type="submit" onclick="tinhSoNgay()">Tính số ngày</button>
+    <h1 id="result"></h1>
+    <script>
+        function day(month) {
+            let days;
+            switch (month) {
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                    days = 31;
+                    break;
+                case 4: case 6: case 9: case 11:
+                    days = 30;
+                    break;
+                default:
+                    days = "28 hoặc 29"
+                    break;
+            }
+            return days;
+        }
+        function tinhSoNgay() {
+            const month = parseInt(document.getElementById('month').value);
+        const days = day(month);
+        document.getElementById('result').innerText = ` Tháng ${month} có ${days} ngày.`;
+        }
+    </script>
+</body>
+</html>
