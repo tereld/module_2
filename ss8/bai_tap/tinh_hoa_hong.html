@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+    <script>
+        alert(`Dưới 100tr hoa hồng 3%
+Dưới 200tr hoa hồng 4%
+Trên 200tr hoa hồng 5% 
+        `);
+        let a = parseInt(prompt("Nhập doanh thu(trăm triệu):"));
+        let bonus;
+        if (a < 100) {
+            bonus = a * 0.03;
+        } else if (a < 200) {
+            bonus = a * 0.04;
+        } else {
+            bonus = a * 0.05;
+        }
+        alert(`Hoa hồng nhận được là: ` + bonus);
+    </script>
+</body>
+</html>

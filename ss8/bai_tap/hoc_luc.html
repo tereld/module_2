@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học lực</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập điểm kiểm tra:"));
+        let b = parseInt(prompt("Nhập điểm thi giữa kì:"));
+        let c = parseInt(prompt("Nhập điểm thi cuối kì:"));
+        let avg = parseFloat((a + (b * 2) + (c * 3)) / 6).toFixed(2);
+        console.log(avg);
+        
+        if (avg >= 8) {
+            alert("Học lực giỏi");
+        } else if (avg >= 6) {
+            alert("Học lực khá");
+        } else {
+            alert("Học lực trung bình");
+        }
+    </script>
+</body>
+</html>
