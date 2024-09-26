@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập lương của bạn(triệu đồng): "));
+
+        let offer;
+        if (a > 15) {
+            offer = 0.3 * a;
+        } else if (a >= 7) {
+            offer = 0.2 * a;
+        } else {
+            offer = 0.1 * a;
+        }
+        alert("Thuế thu nhập cá nhân của bạn là: " +offer);
+    </script>
+</body>
+</html>
