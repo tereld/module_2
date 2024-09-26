@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập hệ số bậc 2 theo dạng(ax^2+bx+c=0): "));
+        let b = parseFloat(prompt("Nhập hệ số bậc 1 theo dạng(ax^2+bx+c=0): "));
+        let c = parseFloat(prompt("Nhập hệ số tự do theo dạng(ax^2+bx+c=0): "));
+
+        if (a == 0) {
+            let y = ((-c) / a);
+            alert("Đáp án là: "+y);
+        } else {
+            let delta = (b*b - 4*a*c);
+            if (delta < 0) {
+                alert("Phương trình vô nghiệm!")
+            } else if (delta == 0) {
+                let y = ((-b/(2*a)));
+                alert("Phương trình có 1 nghiệm kép là: "+y);
+            } else {
+                let y1 = ((-b + Math.sqrt(delta)) / (2 * a));
+                let y2 = ((-b - Math.sqrt(delta)) / (2 * a));
+                alert(`Phương trình có 2 nghiệm phân biệt là: ${y1.toFixed(2)} và ${y2.toFixed(2)}`);
+            }
+        }
+    </script>
+</body>
+</html>

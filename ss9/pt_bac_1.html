@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập hệ số bậc 1 theo dạng(ax+b=0): "));
+        let b = parseFloat(prompt("Nhập hệ số tự do theo dạng(ax+b=0): "));
+
+        if (a == 0) {
+            alert("Phương trình không tồn tại! Số a phải khác 0!")
+        } else {
+            let y = ((-b) / a);
+            alert("Đáp án là: "+y);
+        }
+    </script>
+</body>
+</html>
