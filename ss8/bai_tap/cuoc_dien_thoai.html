@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số phút thời lượng cuộc gọi(phút):"));
+
+        let cost = 25;
+        let price;
+        if (a <= 50) {
+            price = cost + (600 * a);
+        } else if (a <= 200) {
+            price = cost + (600 * 50) + (400 * (a - 50));
+        } else {
+            price = cost + (600 * 50) + (400 * 150) + (200 * (a - 200));
+        }
+        alert("Số tiền cước cho cuộc gọi này là: " + price);
+    </script>
+</body>
+</html>
