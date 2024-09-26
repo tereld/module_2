@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập số kWh điện đã tiêu thụ: "));
+
+        if (a <= 50) {
+            let price = a * 1678;
+            alert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        } else if (a <= 100) {
+            let price = (50 * 1678) + (a * 1734);
+            alert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        } else if (a <= 200) {
+            let price = (50 * 1678) + (50 * 1734) + (a * 2014);
+            alert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        } else if (a <= 300) {
+            let price = (50 * 1678) + (50 * 1734) + (100 * 2014) + (a * 2536);
+            aalert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        } else if (a <= 400) {
+            let price = (50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + (a * 2834);
+            alert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        } else if (a <= 400) {
+            let price = (50 * 1678) + (50 * 1734) + (100 * 2014) + (100 * 2536) + (100 * 2834) + (a * 2927);
+            alert(`Số tiền bạn phải trả là: ${price} nghìn đồng`);
+        }
+    </script>
+</body>
+</html>
