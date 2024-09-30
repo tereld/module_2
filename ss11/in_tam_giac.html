@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số độ dài hàng của tam giác"));
+        console.log("Tam giác hướng lên trên bên trái");
+        for (let i = 1; i <= a; i++) {
+            let hang = "";
+            for (let j = 1; j <=i; j++) {
+                hang += "* ";
+            }
+            console.log(hang);
+        }
+
+        console.log("Tam giác hướng xuống bên trái");
+        for (let i = a; i >= 1; i--) {
+            let hang = "";
+            for (let j = 1; j <= i; j++) {
+                hang += "* ";
+            }
+            console.log(hang);
+        }
+
+        console.log("Tam giác hướng lên bên phải");
+        for (let i = 1; i <= a; i++) {
+            let hang = "";
+            for (let j = a; j > i; j--) {
+                hang += "  ";
+            }
+            for (let k = 1; k <= i; k++) {
+                hang += "* ";
+            }
+            console.log(hang);
+        }
+
+        console.log("Tam giác hướng xuống bên phải");
+        for (let i = 1; i <= a; i++) {
+            let hang = "";
+            for (let j = 1; j < i; j++) {
+                hang += "  ";
+            }
+            for (let k = a; k >= i; k--) {
+                hang += "* ";
+            }
+            console.log(hang);
+        }
+    </script>
+</body>
+</html>
