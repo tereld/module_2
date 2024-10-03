@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gộp mảng</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số lượng phần tử của mảng A: "))
+        let arrA = [];
+        for (let i = 0; i < a; i++) {
+            let elementA = parseInt(prompt(`Nhập phần tử thứ ${i} : `));
+            arrA.push(elementA);
+        }
+
+        let b = parseInt(prompt("Nhập số lượng phần tử của mảng B: "))
+        let arrB = [];
+        for (let i = 0; i < b; i++) {
+            let elementB = parseInt(prompt(`Nhập phần tử thứ ${i} : `));
+            arrB.push(elementB);
+        }
+
+        let arrC = [];
+        for (let i = 0; i < a; i++) {
+            arrC.push(arrA[i]);
+        }
+        for (let i = 0; i < b; i++) {
+            arrC.push(arrB[i]);
+        }
+
+        console.log(arrC);
+    </script>
+</body>
+</html>
