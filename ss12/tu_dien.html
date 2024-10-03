@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Nhập từ cần tra: ");
+
+        let english = ["apple", "ruler", "banana"];
+        let vietnamese = ["quả táo", "cây thước", "quả chuối"];
+        
+        let result ="Từ điển không hỗ trợ từ của bạn!";
+        for (let i = 0; i < english.length; i++) {
+            if (a === english[i]) {
+                result =`Từ ${a} có nghĩa là : ${vietnamese[i]}`;
+            }
+        }
+        console.log(result);
+    </script>
+</body>
+</html>
