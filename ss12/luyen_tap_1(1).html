@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số lớn hơn bằng 10</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            let element = parseInt(prompt("Nhập phần tử: "));
+            arr.push(element);
+        }
+
+        let newArr = [];
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] >= 10) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(arr);
+        console.log(newArr);
+    </script>
+</body>
+</html>
