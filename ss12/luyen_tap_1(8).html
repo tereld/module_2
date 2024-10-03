@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số lượng phần tử của mảng: "))
+        let arr = [];
+        for (let i = 0; i < a; i++) {
+            let element = parseInt(prompt(`Nhập phần tử thứ ${i} : `));
+            arr.push(element);
+        }
+
+        let tam;
+
+        for (let i = 0; i < a; i++) {
+            for (let j = i+1; j < a; j++) {
+                if (arr[i] < arr[j]) {
+                    tam = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tam;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>
