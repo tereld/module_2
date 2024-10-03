@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+    <script>
+        let tienBanDau = parseFloat(prompt("Nhập số tiền ban đầu: "));
+        let soThangVay = parseFloat(prompt("Nhập số tháng vay: "));
+        let laiSuat = parseFloat(prompt("Nhập lãi suất hàng tháng(%): "));
+
+        let tienLai = tienBanDau * (laiSuat/100) * ((soThangVay*30)/365);
+        console.log(`Số tiền lãi của bạn là: ${tienLai.toFixed(2)} VNĐ`);
+
+    </script>
+</body>
+</html>
