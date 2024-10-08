@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay thế ký tự</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số phần tử của mảng: "));
+
+        let arr = [];
+        for (let i = 0; i < a; i++) {
+            let element = prompt(`Nhập phần tử thứ ${i}: `)
+            arr.push(element);
+        }
+
+        for (let i = 0; i < a; i++) {
+            if (arr[i] === "-") {
+                arr[i] = "_";
+            } else {
+                continue;
+            }
+        }
+        console.log(arr);
+        
+    </script>
+</body>
+</html>
