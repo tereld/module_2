@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai mảng giống</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số phần tử của mảng A: "));
+
+        let arrA = [];
+        for (let i = 0; i < a; i++) {
+            let elementA = prompt(`Nhập phần tử thứ ${i}: `)
+            arrA.push(elementA);
+        }
+
+        let b = parseInt(prompt("Nhập số phần tử của mảng B: "));
+
+        let arrB = [];
+        for (let i = 0; i < b; i++) {
+            let elementB = prompt(`Nhập phần tử thứ ${i}: `)
+            arrB.push(elementB);
+        }
+
+        var result = "Hai mảng giống nhau!";
+        if (arrA.length != arrB.length) {
+            result = "Hai mảng không giống nhau!";
+        } else {
+            for (let i = 0; i < arrA.length; i++) {
+                if (arrA[i] !== arrB[i]) {
+                    result = "Hai mảng không giống nhau!";
+                } else {
+                    continue;
+                }
+            }
+        }
+        alert(`${result}`);
+    </script>
+</body>
+</html>
