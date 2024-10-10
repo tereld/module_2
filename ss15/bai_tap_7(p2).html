@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi chỗ 2 số</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số a: "));
+        let b = parseInt(prompt("Nhập số b: "));
+
+        function doiSo(a,b) {
+            let temp = 0;
+            temp = a;
+            a = b;
+            b = temp;
+            alert(`Giá trị lúc sau của a là: ${a}`);
+            alert(`Giá trị lúc sau của b là: ${b}`);
+        }
+
+        doiSo(a,b);
+    </script>
+</body>
+</html>
