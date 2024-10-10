@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số lần xuất hiện ks=ý tự</title>
+</head>
+<body>
+    <script>
+        function kyTu() {
+            let a = prompt("Nhập số lượng phần tử của mảng: ");
+            let arr = [];
+            for (let i = 0; i < a; i++) {
+                let element = prompt(`Nhập phần tử thứ ${i}: `);
+                arr.push(element);
+            }
+            
+            let n = prompt("Nhập ký tự cần kiểm tra số lần xuât hiện: ");
+
+            let index = 0;
+            for (let i = 0; i < a; i++) {
+                if (arr[i] === n) {
+                    index += 1;
+                } else {
+                    continue;
+                }
+            }
+
+            if (index == 0) {
+                index = -1;
+            }
+            alert(`Ký tự ${n} có số lần xuất hiện là: ${index}`);
+        }
+
+        kyTu();
+    </script>
+</body>
+</html>
