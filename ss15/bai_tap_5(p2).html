@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nhỏ nhất</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số nguyên thứ nhất: "));
+        let b = parseInt(prompt("Nhập số nguyên thứ hai: "));
+        let c = parseInt(prompt("Nhập số nguyên thứ ba: "));
+
+        function soNhoNhat(a,b,c) {
+            let min = a;
+            if (b < min && b < c) {
+                min = b;
+            } else if (c < min && c < b) {
+                min = c;
+            }
+
+            alert(`Số nhỏ nhất là: ${min}`);
+        }
+
+        soNhoNhat(a,b,c);
+    </script>
+</body>
+</html>
