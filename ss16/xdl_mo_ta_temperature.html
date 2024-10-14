@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng mô hình Temperature</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            constructor(a) {
+                this.nhietdo = a;
+            }
+
+            getDoC() {
+                console.log(`Nhiệt độ C là: ${this.nhietdo}`)
+            }
+
+            getDoF() {
+                console.log(`Nhiệt độ F là: ${(this.nhietdo * (9/5)) + 32}`);
+            }
+
+            getDoK() {
+                console.log(`Nhiệt độ k là: ${this.nhietdo + 273.15}`);
+            }
+        }
+
+        let nhietdo1 = new Temperature(10);
+
+        nhietdo1.getDoC();
+        nhietdo1.getDoF();
+        nhietdo1.getDoK();
+    </script>
+</body>
+</html>
