@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tương tác giữa công tắc và bóng đèn</title>
+</head>
+<body>
+    <script>
+        class ElectricLamp {
+				constructor(status) {
+					this.status = false;
+				}
+
+				turnOn() {
+					this.status = true;
+					console.log("Đèn đang BẬT");
+				}
+
+				turnOff() {
+					this.status = false;
+					console.log("Đèn đang TẮT");
+				}
+		}
+
+        class SwitchButton {
+				constructor(status, lamp) {
+					this.status = false;
+					this.lamp = null;
+				}
+
+				connectToLamp(lamp) {
+					this.lamp = lamp;
+				}
+
+				switchOn() {
+					this.status = true;
+					console.log("Công tắc đã BẬT");
+					this.lamp.turnOn();
+				}
+
+				switchOff() {
+					this.status = false;
+					console.log("Công tắc đã TẮT");
+					this.lamp.turnOff();
+				}
+		}
+
+        let switchButton = new SwitchButton();
+        let electricLamp = new ElectricLamp();
+
+        for (i = 0; i < 5; i++) {
+            switchButton.connectToLamp(electricLamp);
+            switchButton.switchOn();
+            switchButton.switchOff();
+        }
+    </script>
+</body>
+</html>
