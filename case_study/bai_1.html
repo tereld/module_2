@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra mảng</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số lượng phần tử mảng: "));
+
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            let a = parseInt(prompt(`Nhập phần tử thứ ${i}: `));
+            arr.push(a);
+        }
+        
+        var max = arr[0];
+        var result = "OK";
+        for (let i = 0; i < n-1; i++) {
+            for (let j = 1; j < n; j++) {
+                if (max > arr[j]) {
+                    result = "NO";
+                    break;
+                }
+            }
+        }
+
+        console.log(arr);
+        console.log(result);
+    </script>
+</body>
+</html>
