@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng đối xứng</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số phần tử của mảng: "));
+
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let a = parseInt(prompt(`Nhập phần tử thứ ${i}: `));
+            arr.push(a);
+        }
+        
+        let index = n / 2;
+        var result = "Mảng đối xứng!"
+        for (let i = 0; i <= (index - 1); i++) {
+            if (arr[i] != arr[n-1-i]) {
+                result = "Mảng không đối xứng!";
+            }
+        }
+        alert(result);
+        
+    </script>
+</body>
+</html>
