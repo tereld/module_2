@@ -7,11 +7,19 @@
 </head>
 <body>
     <script>
-        function checkTriangle(x, y, z) {
-            let x = parseInt(prompt("Nhập độ dài cạnh thứ nhất: "));
-            let y = parseInt(prompt("Nhập độ dài cạnh thứ hai: "));
-            let z = parseInt(prompt("Nhập độ dài cạnh thứ ba: "));
+        let x = parseInt(prompt("Nhập độ dài cạnh thứ nhất: "));
+        let y = parseInt(prompt("Nhập độ dài cạnh thứ hai: "));
+        let z = parseInt(prompt("Nhập độ dài cạnh thứ ba: "));
+        function checkTriangle(a, b, c) {
+            if ((a + b < c) || (b + c < a) || ( a + c < b)) {
+                alert(`${a}, ${b}, ${c} không phải là 3 cạnh của 1 tam giác!`);
+            } else if ((a*a + b*b == c*c) || (b*b + c*c == a*a) || (a*a + c*c == b*b)) {
+                alert(`${a}, ${b}, ${c} là 3 cạnh của 1 tam giác vuông!`);
+            } else {
+                alert(`${a}, ${b}, ${c} là 3 cạnh của 1 tam giác!`);
+            }
         }
+        checkTriangle(x, y, z);
     </script>
 </body>
 </html>
