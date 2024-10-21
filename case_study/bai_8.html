@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng số nguyên</title>
+</head>
+<body>
+    <script>
+        function mangNT() {
+            let n = parseInt(prompt("Nhập số phần tử của mảng: "));
+
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                let element = prompt(`Nhập phần tử thứ ${i}: `);
+                arr.push(element);
+            }
+            
+            let index = 0;
+            let check = /^\d$/;
+            for (let i = 0; i < n; i++) {
+                if (check.test(arr[i])) {
+                    index++;
+                }
+            }
+
+            if (index === n) {
+                alert("True");
+            } else {
+                alert("False")
+            }
+        }
+
+        mangNT();
+    </script>
+</body>
+</html>
