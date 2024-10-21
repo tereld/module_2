@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cặp liền kề</title>
+</head>
+<body>
+    <script>
+        function kiemTra() {
+            let n = parseInt(prompt("Nhập số phần tử của mảng(nhập số chẵn): "));
+
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                let element = parseInt(prompt(`Nhập phần tử thứ ${i}: `));
+                arr.push(element);
+            }
+            let index = 0;
+            for (let i = 0; i < n; i+=2) {
+                if (arr[i] < arr[i+1]) {
+                    index++;
+                }
+            }
+
+            if (index == n / 2) {
+                alert("OK");
+            } else {
+                alert("NO");
+            }
+        }
+
+        kiemTra();
+    </script>
+</body>
+</html>
