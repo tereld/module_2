@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra phân số</title>
+</head>
+<body>
+    <script>
+        let string = prompt("Nhập tham số cần kiểm tra dạng x/y: ");
+
+        function UCLN(x, y) {
+            while (y !== 0) {
+                let temp = y;
+                y = x % y;
+                x = temp;
+            }
+            return x;
+        }
+
+        function rutGon(tu, mau) {
+            let uoc = UCLN(tu, mau);
+            return `${tu / uoc}/${mau / uoc}`;
+        }
+
+        function kiemTra(x) {
+            const mauSo = /^\d+\/\d+$/;
+            if (mauSo.test(x)) {
+                let [tu, mau] = x.split("/").map(Number);
+                if (mau === 0) {
+                    console.log("Đây không phải là phân số");
+                    return;
+                }
+                let phanSoToiGian = rutGon(tu, mau);
+                
+                if (tu === 0) {
+                    console.log(`Đây là phân số tối giản: 0`);
+                    
+                } else {
+                    console.log(`Đây là phân số tối giản: ${phanSoToiGian}`);
+                }
+            } else {
+                console.log(`Đây không phải là phân số`);
+            }
+        }
+        kiemTra(string);
+    </script>
+</body>
+</html>
