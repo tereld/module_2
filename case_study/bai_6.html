@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng chẵn lẻ</title>
+</head>
+<body>
+    <script>
+        function chanLe() {
+            let n = parseInt(prompt("Nhập số phần tử của mảng: "));
+
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                let element = parseInt(prompt(`Nhập phần tử thứ ${i}: `));
+                arr.push(element);
+            }
+            
+            let index = 0;
+            for (let i = 0; i < n; i++) {
+                if (arr[i] % 2 === 0) {
+                    index++;
+                }
+            }
+
+            if (index === n) {
+                alert("1");
+            } else if (index === 0) {
+                alert("0");
+            } else {
+                alert("-1")
+            }
+        }
+
+        chanLe();
+    </script>
+</body>
+</html>
