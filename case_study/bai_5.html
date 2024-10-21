@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số lớn nhất có 4 chữ số</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số cần tìm: "));
+
+        function kiemTra4So(a) {
+            var n = a.toString();
+            return n.length;
+        }
+
+        function findMaxNumber(a) {
+            var n = a.toString();
+            if (kiemTra4So(a) !== 4) {
+                alert("-1");
+            } else {
+                let max = parseInt(n.slice(1, 4));
+                console.log(max);
+                
+                for (let i = 0; i < 3; i++) {
+                    if (max <= parseInt(n.slice(0, i + 1) + n.slice(i + 2))) {
+                        max = parseInt(n.slice(0, i + 1) + n.slice(i + 2));
+                        console.log(max);
+                    }
+                }
+                alert(`Số lớn nhất được tìm thấy là: ${max}`);
+            }
+        }
+
+        findMaxNumber(a);
+    </script>
+</body>
+</html>
