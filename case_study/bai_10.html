@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyên âm</title>
+</head>
+<body>
+    <script>
+        function checkString() {
+            let str = prompt("Nhập chuỗi cần tìm nguyên âm: ");
+
+            let lowerStr = str.toLowerCase();
+            let strChar = lowerStr.split('').filter(element => element !== ' ');
+
+            console.log(strChar);
+            
+            let newArr = [];
+
+            if (strChar.includes("u") == true) {
+                newArr.push("u");
+            }
+            
+            if (strChar.includes("e") == true) {
+                newArr.push("e");
+            }
+
+            if (strChar.includes("o") == true) {
+                newArr.push("o");
+            }
+
+            if (strChar.includes("a") == true) {
+                newArr.push("a");
+            }
+
+            if (strChar.includes("i") == true) {
+                newArr.push("i");
+            }
+
+            console.log(newArr);
+            
+        }
+
+        checkString()
+    </script>
+</body>
+</html>
