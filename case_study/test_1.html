@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cộng lẻ, trừ chẵn</title>
+</head>
+<body>
+    <script>
+        function sumNumbers() {
+            let n = parseInt(prompt("Nhập số lượng phần tử: "));
+
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                let element = parseInt(prompt(`Nhập giá trị của phần tử thứ ${i}: `));
+                arr.push(element);
+            }
+
+            let s1 = 0;
+            for (let i = 0; i < n; i += 2) {
+                s1 += arr[i];
+            }
+
+            let s2 = 0;
+            for (let i = 1; i < n; i += 2) {
+                s2 += arr[i];
+            }
+
+            alert(s1 - s2);
+        }
+
+        sumNumbers();
+    </script>
+</body>
+</html>
