@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số ký tự in hoa, in thường</title>
+</head>
+<body>
+    <script>
+        function hoaThuong() {
+            let str = prompt("Chuỗi ký tự: ");
+            let indexL = 0;
+            let indexU = 0;
+            if (str === undefined) {
+                alert("[0, 0]");
+            } else {
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toLowerCase() && str[i] !== str[i].toUpperCase()) {
+                        indexL++;
+                    } else if (str[i] === str[i].toUpperCase() && str[i] !== str[i].toLowerCase()) {
+                        indexU++;
+                    }
+                }
+
+                alert(`[${indexU}, ${indexL}]`);
+            }
+        }
+
+        hoaThuong();
+    </script>
+</body>
+</html>
