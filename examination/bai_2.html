@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm</title>
+</head>
+<body>
+    <script>
+        function lamTronDiem() {
+            var diem = parseInt(prompt("Nhập điểm của bạn: "));
+
+            var boiSoTiepTheo = diem + (5 - (diem % 5));
+            if (diem < 48) {
+                alert("Bạn bị trượt với: " + diem + ` điểm`);
+            } else if (boiSoTiepTheo - diem < 3) {
+                alert(`Điểm của bạn là: ` + boiSoTiepTheo + ` điểm`);
+            } else {
+                alert(`Điểm của bạn là: ` + diem + ` điểm`);
+            }
+        }
+        lamTronDiem();
+    </script>
+</body>
+</html>
