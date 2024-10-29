@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nhập mảng từ bàn phím</title>
+</head>
+<body>
+    <script>
+        let mangSoNguyen = [];
+
+        function nhapMang() {
+            let n = prompt("Nhập số lượng phần tử của mảng:");
+
+            for (let i = 0; i < n; i++) {
+                let num = prompt("Nhập phần tử thứ " + (i + 1) + ":");
+                mangSoNguyen.push(parseInt(num));
+            }
+
+            // document.getElementById("arrayResult").innerHTML = "Mảng: " + mangSoNguyen.join(", ");
+        }
+
+        function hienMang() {
+            console.log("Mảng vừa nhập là: " + mangSoNguyen);
+        }
+
+        function xuLyMang() {
+            if (mangSoNguyen.length > 20) {
+                alert("Mảng có quá nhiều phần tử. Vui lòng nhập mảng không quá 20 phần tử.");
+                return;
+            }
+
+            let tong = 0;
+            for (let i = 0; i < mangSoNguyen.length; i++) {
+                if (mangSoNguyen[i] % 3 === 0 && mangSoNguyen[i] % 5 === 0) {
+                    tong += mangSoNguyen[i];
+                }
+            }
+
+            console.log("Tổng các số là bội của 3 và 5: " + tong);
+        }
+
+        nhapMang();
+        hienMang();
+        xuLyMang();
+    </script>
+</body>
+</html>
